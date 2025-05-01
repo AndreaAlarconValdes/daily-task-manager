@@ -11,6 +11,7 @@ body {
   background-color: #6e763f;
 }
 
+
 /* HOME PAGE */
 
 .mainDiv {
@@ -173,6 +174,8 @@ padding: .5rem;
   padding: 10px 16px;
   outline: none;
   border-radius: 16px;
+  color: black;
+  -webkit-color: black;
 }
 #add-btn {
   cursor: pointer;
