@@ -33,13 +33,16 @@ displayMonth.innerHTML = month[day.getMonth()];
 
 const addTaskBtn = document.getElementById("add-btn");
 const inputTask = document.getElementById("write-task");
+const tasksNumber = document.getElementById("tasks-number");
 const taskListContainer = document.getElementById("task-list");
 const progressBarValue = document.getElementById("progress-bar");
+const progressPercentage = document.getElementById("progress-percentage");
 const finishBtn = document.getElementById("finish-btn");
 
 let taskList = [];
 
 addTaskBtn.addEventListener("click", () => {
+  console.log("Hola");
   const taskText = inputTask.value.trim();
   if (taskText === "") {
     console.warn("Please enter a task before adding to the list.");
@@ -71,18 +74,25 @@ function renderTaskList() {
 
     taskListContainer.appendChild(p);
   });
+
+  tasksNumber.textContent = `${taskList.length}`;
 }
 
 function updateProgressBar() {
   if (taskList.length === 0) {
     progressBarValue.value = 0;
+    progressPercentage.textContent = "0%";
     return;
   }
 
   const completedTasks = taskList.filter((task) => task.done).length;
   const progress = (completedTasks / taskList.length) * 100;
   progressBarValue.value = progress;
+  progressPercentage.textContent = `${Math.round(progress)}%`; // 👈 Mostrar % redondeado
 }
+
+
+renderTaskList();
 
 finishBtn.addEventListener("click", () => {
   console.log("Saving progress:", progressBarValue.value);

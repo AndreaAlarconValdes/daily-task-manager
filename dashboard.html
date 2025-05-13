@@ -3,6 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap"
+      rel="stylesheet"
+    />
 
     <link
       href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
@@ -14,31 +18,34 @@
   </head>
   <body>
     <div class="dashDiv">
-      <div class="top-section">
-        <div class="datetime">
-          <span id="day"></span>
-          <span id="number"></span>
-          <span id="month"></span>
+      <div class="datetime">
+        <span id="day"></span>
+        <span id="number"></span>
+        <span id="month"></span>
+      </div>
+      <div class="add-task">
+        <input
+          id="write-task"
+          type="text"
+          placeholder="Write your task here..."
+        />
+        <button id="add-btn">+</button>
+      </div>
+      <div class="task-section">
+        <div id="current-tasks" class="tasks-title">
+          <h3>Current Tasks</h3>
+          <div id="tasks-number" class="tasks-number"></div>
         </div>
-
-        <div class="right-section">
-          <div class="progression">
-            <h3>Progression</h3>
-            <progress id="progress-bar" value="0" max="100"></progress>
-          </div>
-
-          <div class="add-task">
-            <input
-              id="write-task"
-              type="text"
-              placeholder="Write your task here..."
-            />
-            <button id="add-btn">+</button>
-          </div>
+        <div class="bottom-section" id="task-list"></div>
+      </div>
+      <div class="progression">
+        <h3>Your progress</h3>
+        <div class="progress-section">
+          <progress id="progress-bar" value="0" max="100"></progress>
+          <span id="progress-percentage">0%</span>
         </div>
       </div>
 
-      <div class="bottom-section" id="task-list"></div>
       <button id="finish-btn">FINISH DAY</button>
     </div>
 
