@@ -1,4 +1,4 @@
-### Dailist – Daily Task Organizer
+# Dailist – Daily Task Organizer
 
 <a href="https://andreaalarconvaldes.github.io/daily-task-manager/" target="_blank">
 <img src="/public/dailist-mockup.png" alt=website  />
