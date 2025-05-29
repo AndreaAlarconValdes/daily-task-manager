@@ -1,6 +1,8 @@
 ## Daily Task Manager
 
-![design image](./public/ReadmeImg.png)
+<a href="https://andreaalarconvaldes.github.io/daily-task-manager/" target="_blank">
+<img src="/public/dailist-mockup.png" alt=website  />
+</a>
 
 This project was developed as part of a web development bootcamp. It is built using HTML, CSS, and JavaScript.
 
